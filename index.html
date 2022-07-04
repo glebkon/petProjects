@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class = "bigDiv">
+        <div id = "main">
+            <p><b>Choose distance unit:</b><br>
+                <select id="selectUnit" class="primeSelect">
+                </select>
+            </p>
+            <p><b>Enter distance value:</b><br>
+                <input type="text" id = "inputValue" class = "input-in" required>
+            </p>
+            <p><b>Enter the unit to which you want to convert the distance:</b><br>
+                <select id="selectConvertTo" class = "primeSelect">
+                </select>
+            </p>
+
+            <button onclick="show()">Submit</button> <br> <br>
+        </div>
+        <div class = "side">
+            <div id = "content" hidden>
+                <p><b>Enter new unit:</b><br>
+                    <input type="text" id="userUnit">
+                </p>
+                <p><b>How many meters are in new unit:</b><br>
+                    <input type="text" id="userRule" required>
+                </p>
+                <button onclick="editJson()">Save changes</button>
+                <button onclick="back()">Discard</button>
+            </div>
+            <div id = "toDeleteDiv" hidden>
+                <p><b>Enter the name of unit you want to delete:</b><br>
+                    <select id="selectToDelete" class="primeSelect">
+                    </select>
+                </p>
+                <button onclick="editJson(0)">Save changes</button>
+                <button onclick="back(0)">Discard</button>
+            </div> <br>
+            <div id="editButtons">
+                <button id ="btnAdd" onclick="switchHidden()">Add new unit</button>
+                <button id ="btnDelete" onclick="switchHidden(0)">Delete a unit</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
