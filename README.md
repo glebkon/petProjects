@@ -8,3 +8,5 @@ Output:
 An object in JSON format containing the received distance value, rounded up to
 hundredths, as well as the designation of the corresponding unit of measure, for example:
 {"unit": "ft", "value": 1.64}
+
+It is also possible to expand the list of supported units by setting conversion rules via JSON file.
