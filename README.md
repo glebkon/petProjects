@@ -8,7 +8,7 @@ The following requirements are fulfilled with appropriate validations enforced:
 - Update the inventory with available units for a product.  
 - After a user places an order for a product, its unit has to be decreased by the quantity he placed into cart.
 
-API Endpoints:
+API Endpoints:  
 GET /api/v1/users/:email  
 GET /api/v1/users/  
 POST /api/v1/users  
