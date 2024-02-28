@@ -1,5 +1,5 @@
 import React from "react";
-/* import "./SelectUnit.css"; */
+import "./SelectUnit.css";
 
 function SelectUnit({ id, units, onChange}) {
   return (

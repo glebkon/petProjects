@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SelectUnit from "./SelectUnit";
-/* import "./Convert.css"; */
+import "./Convert.css";
 
 function Convert({ unitsObj }) {
   const [distance, setDistance] = useState("");
@@ -32,7 +32,8 @@ function Convert({ unitsObj }) {
   };
 
   const calculateConvertedDistance = () => {
-    return (distance * unitsObj[unit]) / unitsObj[convertTo];
+    const res = (distance * unitsObj[unit]) / unitsObj[convertTo];
+    return Number.isInteger(res) ? res : res.toFixed(2);
   };
 
   return (
@@ -57,7 +58,9 @@ function Convert({ unitsObj }) {
       </div>
       <div className="output">
         <label htmlFor="convertedDistance">Converted Distance:</label>
-        <span id="convertedDistance">{converted ? `${converted} ${convertTo}` : ""}</span>
+        <span id="convertedDistance">
+          {converted ? `${converted} ${convertTo}` : ""}
+        </span>
       </div>
       <button onClick={convertDistance}>Convert</button>
     </>
