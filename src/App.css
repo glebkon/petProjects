@@ -1,0 +1,61 @@
+.converter {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input,
+.output,
+.convertTo {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.input label,
+.input input, 
+.convertTo label {
+  margin-right: 10px;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.additional-rule {
+  margin-top: 10px;
+}
+
+.additional-rule label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.additional-rule input[type="text"],
+.additional-rule input[type="number"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
