@@ -1,7 +1,7 @@
-const categoryService = require("../service/category.service.js");
+const categoryDAO = require("../dao/category.dao");
 
 exports.create = (newCategory, done) => {
-  categoryService.create(newCategory, (err, result) => {
+  categoryDAO.create(newCategory, (err, result) => {
     if (err) {
       return done(err);
     }
@@ -10,7 +10,7 @@ exports.create = (newCategory, done) => {
 };
 
 exports.findAll = (name, done) => {
-  categoryService.findAll(name, (err, categories) => {
+  categoryDAO.findAll(name, (err, categories) => {
     if (err) {
       return done(err);
     }
@@ -19,7 +19,7 @@ exports.findAll = (name, done) => {
 };
 
 exports.findById = (id, done) => {
-  categoryService.findById(id, (err, category) => {
+  categoryDAO.findById(id, (err, category) => {
     if (err) {
       return done(err);
     }
@@ -28,7 +28,7 @@ exports.findById = (id, done) => {
 };
 
 exports.updateById = (id, upCategory, done) => {
-  categoryService.updateById(id, upCategory, (err, result) => {
+  categoryDAO.updateById(id, upCategory, (err, result) => {
     if (err) {
       return done(err);
     }
@@ -37,7 +37,7 @@ exports.updateById = (id, upCategory, done) => {
 };
 
 exports.remove = (id, done) => {
-  categoryService.remove(id, (err, result) => {
+  categoryDAO.remove(id, (err, result) => {
     if (err) {
       return done(err);
     }
@@ -46,7 +46,7 @@ exports.remove = (id, done) => {
 };
 
 exports.removeAll = (done) => {
-  categoryService.removeAll((err, result) => {
+  categoryDAO.removeAll((err, result) => {
     if (err) {
       return done(err);
     }
